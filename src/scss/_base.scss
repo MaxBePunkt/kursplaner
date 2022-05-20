@@ -1,0 +1,63 @@
+/*
+Fonts:
+*/
+@font-face {
+    font-family: "NeueMachina-Light";
+    src: url("../fonts/NeueMachina-Light.otf") format("otf");
+}
+@font-face {
+    font-family: "NeueMachina-Regular";
+    src: url("../fonts/NeueMachina-Regular.otf") format("otf");
+}
+@font-face {
+    font-family: "NeueMachina-Ultrabold";
+    src: url("../fonts/NeueMachina-Ultrabold.otf") format("otf");
+}
+:root {
+    // Colors
+    --clr-light: #ffffff;
+    --clr-dark: hsl(0, 0%, 20%);
+    --clr-dark-100: hsl(0, 0%, 90%);
+    --clr-accent: hsl(252, 71%, 56%);
+    --clr-accent-100: hsl(252, 71%, 90%);
+    --clr-accent-200: hsl(252, 71%, 80%);
+    // Fonts
+    --ff-reg-light: "NeueMachina-Light";
+    --ff-reg-regular: "NeueMachina-Regular";
+    --ff-reg-bold: "NeueMachina-Ultrabold";
+    --ff-accent: ;
+    // Sizes
+    --fs-light: 1rem;
+    --fs-regular: 1.5rem;
+    --fs-medium: 2rem;
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--ff-reg-regular);
+}
+body {
+    width: min(100% - 5%, 1400px);
+    margin-inline: auto;
+    // background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--clr-dark);
+}
+p {
+    font-family: var(--ff-reg-regular);
+}
+.active {
+    a {
+        color: var(--clr-accent);
+    }
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-reg-bold);
+}

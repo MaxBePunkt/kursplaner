@@ -1,0 +1,9 @@
+// sass --watch assets/scss/main.scss assets/css/style.css
+@import "_resets.scss";
+@import "_base.scss";
+@import "_components.scss";
+@import "_mediaQueries.scss";
+
+// Components
+@import "../components/sideNav/sideNav.scss";
+@import "../components/table/table.scss";
