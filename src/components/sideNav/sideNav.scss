@@ -1,5 +1,6 @@
 .sideNav {
     position: fixed;
+    z-index: 50;
     width: 300px;
     height: 100vh;
     background-color: var(--clr-accent);
