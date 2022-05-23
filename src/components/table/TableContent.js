@@ -8,6 +8,10 @@ const TableContent = (props) => {
                 (props.isHoliday !== false &&
                     props.isHoliday[0].type === "public")
                     ? "table__content table__content--frei"
+                    : props.date.getFullYear() === new Date().getFullYear() &&
+                      props.date.getMonth() === new Date().getMonth() &&
+                      props.date.getDate() === new Date().getDate()
+                    ? "table__content table__content--today"
                     : "table__content"
             }
         >

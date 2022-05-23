@@ -42,10 +42,10 @@ const Table = () => {
             kurstage++;
         }
     }
-    console.log(datesCollection);
     return (
         <section className="table">
             <article className="table__datepicker">
+                <h2>Startdatum: </h2>
                 <DatePicker onChange={setDate} value={date} clearIcon={null} />
             </article>
             <article className="table__header">
@@ -72,13 +72,15 @@ const Table = () => {
                     <h2>ToDo's</h2>
                 </div>
             </article>
-            {datesCollection.map((date, i) => {
+            {datesCollection.map((date, key) => {
                 return (
                     <TableContent
+                        key={key}
                         showDate={date.showDate}
                         weekDay={date.weekDay}
                         isHoliday={date.isHoliday}
                         day={date.day}
+                        date={date.date}
                     />
                 );
             })}

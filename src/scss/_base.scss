@@ -18,9 +18,12 @@ Fonts:
     --clr-light: #ffffff;
     --clr-dark: hsl(0, 0%, 20%);
     --clr-dark-100: hsl(0, 0%, 90%);
-    --clr-accent: hsl(252, 71%, 56%);
-    --clr-accent-100: hsl(252, 71%, 90%);
-    --clr-accent-200: hsl(252, 71%, 80%);
+    --clr-accent-green: hsl(163, 100%, 46%);
+    --clr-accent-green-100: hsl(163, 100%, 90%);
+    --clr-accent-green-200: hsl(163, 100%, 80%);
+    --clr-accent-blue: hsl(252, 71%, 56%);
+    --clr-accent-blue-100: hsl(252, 71%, 90%);
+    --clr-accent-blue-200: hsl(252, 71%, 80%);
     // Fonts
     --ff-reg-light: "NeueMachina-Light";
     --ff-reg-regular: "NeueMachina-Regular";
@@ -52,7 +55,7 @@ p {
 }
 .active {
     a {
-        color: var(--clr-accent);
+        color: var(--clr-accent-blue);
     }
 }
 h1,

@@ -1,9 +1,11 @@
 .sideNav {
     position: fixed;
     z-index: 50;
+    top: 0;
+    bottom: 0;
     width: 300px;
     height: 100vh;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent-blue);
     border-left: 12px solid var(--clr-light);
     transition: all 1s;
     div {
@@ -43,7 +45,7 @@
 
         img {
             border-radius: 50%;
-            background-color: var(--clr-accent);
+            background-color: var(--clr-accent-blue);
             width: 80px;
             transition: all 1s;
         }
@@ -58,7 +60,7 @@
         display: grid;
         width: 50px;
         grid-template-rows: 1fr 0fr 1fr;
-        background-color: var(--clr-accent);
+        background-color: var(--clr-accent-blue);
     }
 
     &__content {

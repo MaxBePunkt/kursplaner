@@ -19,11 +19,7 @@ const SideNav = () => {
                     }}
                 />
             </div>
-            {/* <article className="sideNav__logoWrap">
-                <div></div>
-                
-                <div></div>
-            </article> */}
+
             <article className="sideNav__content">{/* Content here */}</article>
         </section>
     );
