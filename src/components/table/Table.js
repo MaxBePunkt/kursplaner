@@ -24,7 +24,7 @@ const Table = () => {
             }.${newDate.getFullYear()}`,
             //! Feiertag? false oder Objekt mit Feiertag
             isHoliday: hd.isHoliday(new Date(newDate)),
-            //Wochentag 0-6 0=Sonntag
+            //! Wochentag 0-6 0=Sonntag
             weekDay: newDate.getDay(),
         });
         if (
@@ -46,12 +46,10 @@ const Table = () => {
     return (
         <section className="table">
             <article className="table__datepicker">
-                <DatePicker onChange={setDate} value={date} clearIcon="" />
+                <DatePicker onChange={setDate} value={date} clearIcon={null} />
             </article>
             <article className="table__header">
-                <div>
-                    <h2>Tag</h2>
-                </div>
+                <div></div>
                 <div>
                     <h2>Datum</h2>
                 </div>
