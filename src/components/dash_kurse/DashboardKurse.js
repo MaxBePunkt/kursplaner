@@ -4,6 +4,7 @@ import { collection, onSnapshot, query } from "firebase/firestore";
 import "react-sweet-progress/lib/style.css";
 import { useEffect, useState } from "react";
 import DashboardOneKurs from "./DashboardOneKurs";
+import { NavLink } from "react-router-dom";
 const DashboardKurse = () => {
     const [kurse, setKurse] = useState([]);
 
@@ -37,9 +38,9 @@ const DashboardKurse = () => {
                 );
             })}
 
-            <a href="/addkurs" className="btn">
+            <NavLink href="/addkurs" className="btn">
                 +
-            </a>
+            </NavLink>
         </article>
     );
 };
