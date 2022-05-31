@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
+import { MdPostAdd, MdOutlineSpaceDashboard } from "react-icons/md";
 const SideNav = () => {
     let [toggleNav, setToggleNav] = useState(false);
     let toggleFunction = () => {
@@ -8,7 +9,7 @@ const SideNav = () => {
     return (
         <section
             className="sideNav"
-            style={{ right: toggleNav ? "0" : "-300px" }}
+            style={{ width: toggleNav ? "80px" : "0" }}
         >
             <div onClick={toggleFunction}>
                 <img
@@ -20,7 +21,25 @@ const SideNav = () => {
                 />
             </div>
 
-            <article className="sideNav__content">{/* Content here */}</article>
+            <article className="sideNav__content">
+                {/* Content here */}
+                <NavLink
+                    className={(navData) =>
+                        navData.isActive ? "link link--active" : "link"
+                    }
+                    to="/"
+                >
+                    <MdOutlineSpaceDashboard />
+                </NavLink>
+                <NavLink
+                    className={(navData) =>
+                        navData.isActive ? "link link--active" : "link"
+                    }
+                    to="/addkurs"
+                >
+                    <MdPostAdd />
+                </NavLink>
+            </article>
         </section>
     );
 };

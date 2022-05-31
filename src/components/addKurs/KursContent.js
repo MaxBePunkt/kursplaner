@@ -1,4 +1,4 @@
-const TableContent = (props) => {
+const KursContent = (props) => {
     var days = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
     return (
         <article
@@ -7,12 +7,10 @@ const TableContent = (props) => {
                 props.weekDay === 0 ||
                 (props.isHoliday !== false &&
                     props.isHoliday[0].type === "public")
-                    ? "table__content table__content--frei"
-                    : props.date.getFullYear() === new Date().getFullYear() &&
-                      props.date.getMonth() === new Date().getMonth() &&
-                      props.date.getDate() === new Date().getDate()
-                    ? "table__content table__content--today"
-                    : "table__content"
+                    ? "detailKurs__content detailKurs__content--frei"
+                    : props.date === new Date().toLocaleDateString()
+                    ? "detailKurs__content detailKurs__content--today"
+                    : "detailKurs__content"
             }
         >
             {/* Wochentag */}
@@ -117,4 +115,4 @@ const TableContent = (props) => {
     );
 };
 
-export default TableContent;
+export default KursContent;

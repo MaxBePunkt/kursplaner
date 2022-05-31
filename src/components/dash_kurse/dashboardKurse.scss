@@ -1,0 +1,41 @@
+.dashboardKurse {
+    background-image: linear-gradient(
+        to top,
+        var(--clr-dark),
+        var(--clr-dark-800)
+    );
+    border-radius: 10px;
+    padding: 5%;
+    .btn {
+        width: 100%;
+    }
+    a {
+        color: var(--clr-light);
+    }
+    &__oneContainer {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 5% 0;
+        padding: 2%;
+        // border: 1px solid var(--clr-light);
+        border-radius: 10px;
+        transition: all 0.5s;
+        img {
+            width: 80%;
+        }
+        .react-sweet-progress-circle-outer {
+            display: grid;
+            place-items: center;
+            .react-sweet-progress-symbol {
+                color: var(--clr-light);
+                font-size: var(--fs-regular);
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: var(--clr-accent-blue);
+        }
+    }
+}

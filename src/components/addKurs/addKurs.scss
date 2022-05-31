@@ -1,0 +1,46 @@
+.table {
+    position: relative;
+    .newCourse__inputCon {
+        display: grid;
+        gap: 20px;
+        margin: 2% auto;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        div {
+            margin-inline: auto;
+            &:last-of-type {
+                grid-column: 2/3;
+                .btn {
+                    border: none;
+                }
+            }
+        }
+    }
+    &__datepicker {
+        h2 {
+            display: inline-block;
+            margin: 0 1% 0 0;
+            color: var(--clr-light);
+        }
+        .react-date-picker__wrapper {
+            font-family: var(--ff-reg-light);
+            background-color: var(--clr-accent-blue);
+            color: var(--clr-light);
+            padding: 5%;
+            border: none;
+        }
+        .react-date-picker__calendar {
+            inset: 100% -100% auto !important;
+        }
+        input {
+            border: none;
+            color: var(--clr-light);
+            font-size: var(--fs-regular);
+        }
+        svg {
+            stroke: var(--clr-light);
+        }
+    }
+}

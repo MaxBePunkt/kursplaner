@@ -6,4 +6,9 @@
 
 // Components
 @import "../components/sideNav/sideNav.scss";
-@import "../components/table/table.scss";
+@import "../components/addKurs/addKurs.scss";
+@import "../components/dash_kurse/dashboardKurse.scss";
+
+// Pages
+@import "../pages/dashboard/dashboard.scss";
+@import "../pages/detailKurs/detailKurs.scss";

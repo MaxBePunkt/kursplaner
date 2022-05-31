@@ -1,59 +1,29 @@
 .sideNav {
-    position: fixed;
+    position: absolute;
     z-index: 50;
     top: 0;
+    right: 0;
     bottom: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: var(--clr-accent-blue);
-    border-left: 12px solid var(--clr-light);
+    overflow: hidden;
+    background-color: var(--clr-dark);
+    border-left: 1px solid var(--clr-light);
     transition: all 1s;
     div {
-        /* background-color: var(--clr-light); */
         transform: translate(-50%, -50%);
         cursor: pointer;
         border-radius: 50%;
-        position: absolute;
-        border: 7px solid #fff;
+        position: fixed;
+        border: 2px solid #fff;
         top: 50%;
+        width: 50px;
         transition: all 1s;
-        // &:hover {
-        //     transform: translate(-70%, -50%);
-        // }
-        &::before {
-            content: " ";
-            position: absolute;
-            top: -39%;
-            left: 40px;
-            width: 30px;
-            height: 30px;
-            background-color: transparent;
-            border-bottom-left-radius: 35px;
-            box-shadow: -12px 0px 0px 0 var(--clr-light);
-        }
-        &::after {
-            content: " ";
-            position: absolute;
-            top: 100%;
-            left: 40px;
-            width: 30px;
-            height: 30px;
-            background-color: transparent;
-            border-top-left-radius: 30px;
-            box-shadow: -12px 0px 0px 0 var(--clr-light);
-        }
-
+        aspect-ratio: 1/1;
         img {
             border-radius: 50%;
             background-color: var(--clr-accent-blue);
             width: 80px;
             transition: all 1s;
         }
-        // &:nth-of-type(2) {
-        // }
-        // &:nth-of-type(3) {
-        //     border-radius: 0 30px 0 0;
-        // }
     }
     &__logoWrap {
         height: 100vh;
@@ -62,8 +32,25 @@
         grid-template-rows: 1fr 0fr 1fr;
         background-color: var(--clr-accent-blue);
     }
-
     &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         // Content here
+        .link {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            margin: 20px;
+            width: fit-content;
+            font-size: var(--fs-regular);
+            transition: all 0.5s;
+            border-radius: 5px;
+            color: var(--clr-light);
+            &--active {
+                box-shadow: 0px 0px 10px var(--clr-dark-700);
+            }
+        }
     }
 }
