@@ -38,7 +38,7 @@ const DashboardKurse = () => {
                 );
             })}
 
-            <NavLink href="/addkurs" className="btn">
+            <NavLink to="/addkurs" className="btn">
                 +
             </NavLink>
         </article>
