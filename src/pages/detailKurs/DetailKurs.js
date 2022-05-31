@@ -26,7 +26,7 @@ const DetailKurs = () => {
 
     useEffect(() => {
         const q = query(collection(db, "kurse"));
-        const unsub = onSnapshot(q, (querySnapshot) => {
+        onSnapshot(q, (querySnapshot) => {
             setKurs(
                 querySnapshot.docs
                     .map((d) => d.data())

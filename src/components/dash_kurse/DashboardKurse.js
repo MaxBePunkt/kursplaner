@@ -9,7 +9,7 @@ const DashboardKurse = () => {
 
     useEffect(() => {
         const q = query(collection(db, "kurse"));
-        const unsub = onSnapshot(q, (querySnapshot) => {
+        onSnapshot(q, (querySnapshot) => {
             setKurse(querySnapshot.docs.map((d) => d.data()));
         });
     }, []);
