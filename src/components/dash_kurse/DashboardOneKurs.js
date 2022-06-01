@@ -13,7 +13,7 @@ const DashboardOneKurs = (props) => {
                 </div>
                 <Progress
                     type="circle"
-                    percent={Math.ceil((props.day / 110) * 100)}
+                    percent={Math.floor((props.day / 110) * 100)}
                     width="80%"
                     strokeWidth={5}
                     theme={{

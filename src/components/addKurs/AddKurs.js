@@ -1,9 +1,16 @@
 import Holidays from "date-holidays";
 import { useState } from "react";
-import DatePicker from "react-date-picker";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Select from "@mui/material/Select";
 import db from "../../config/firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 import { NavLink } from "react-router-dom";
+import { MenuItem } from "@mui/material";
+import { DesktopDatePicker } from "@mui/x-date-pickers";
+// import DatePicker from "react-date-picker";
 // import { getFirestore } from "firebase/firestore";
 let hd = new Holidays("DE", "NW");
 
@@ -58,41 +65,46 @@ const AddKurs = () => {
         });
     };
     return (
-        <section className="table">
+        <section className="addKurs">
             <h1>Erstelle einen neuen Kurs</h1>
             <article className="newCourse__inputCon">
                 <div>
-                    <p>Kursname:</p>
-                    <input
-                        type="text"
-                        name="inputKursName"
-                        id="inputKursName"
+                    <TextField
+                        id="outlined-required"
+                        label="Kursname:"
+                        color="secondary"
                         onChange={(e) => setKursname(e.target.value)}
                     />
                 </div>
-                <div className="table__datepicker">
-                    <p>Startdatum: </p>
-                    <DatePicker
-                        onChange={setDate}
-                        value={date}
-                        clearIcon={null}
-                    />
+                <div>
+                    <LocalizationProvider dateAdapter={AdapterDateFns}>
+                        <DesktopDatePicker
+                            label="Startdatum:"
+                            inputFormat="dd.MM.yyyy"
+                            onChange={setDate}
+                            color="secondary"
+                            value={date}
+                            renderInput={(params) => <TextField {...params} />}
+                        />
+                    </LocalizationProvider>
                 </div>
                 <div>
-                    <p>Kursform:</p>
-                    <select
-                        name="inputKursform"
-                        id="inputKursform"
+                    <Select
+                        id="demo-simple-select-helper"
+                        value={kursform}
+                        color="secondary"
                         onChange={(e) => setKursform(e.target.value)}
                     >
-                        <option value="Fullstack Vollzeit">
+                        <MenuItem value="Fullstack Vollzeit">
                             Fullstack Vollzeit
-                        </option>
-                        <option value="Frontend Teilzeit">
+                        </MenuItem>
+                        <MenuItem value="Frontend Teilzeit">
                             Frontend Teilzeit
-                        </option>
-                        <option value="UX/UI Teilzeit">UX/UI Teilzeit</option>
-                    </select>
+                        </MenuItem>
+                        <MenuItem value="UX/UI Teilzeit">
+                            UX/UI Teilzeit
+                        </MenuItem>
+                    </Select>
                 </div>
                 <div>
                     <NavLink

@@ -48,7 +48,7 @@ const DetailKurs = () => {
 
                         <Progress
                             type="circle"
-                            percent={Math.ceil((isToday / 110) * 100)}
+                            percent={Math.floor((isToday / 110) * 100)}
                             width="20vw"
                             strokeWidth={5}
                             theme={{

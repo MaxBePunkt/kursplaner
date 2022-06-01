@@ -1,4 +1,4 @@
-.table {
+.addKurs {
     position: relative;
     .newCourse__inputCon {
         display: grid;
@@ -16,31 +16,6 @@
                     border: none;
                 }
             }
-        }
-    }
-    &__datepicker {
-        h2 {
-            display: inline-block;
-            margin: 0 1% 0 0;
-            color: var(--clr-light);
-        }
-        .react-date-picker__wrapper {
-            font-family: var(--ff-reg-light);
-            background-color: var(--clr-accent-blue);
-            color: var(--clr-light);
-            padding: 5%;
-            border: none;
-        }
-        .react-date-picker__calendar {
-            inset: 100% -100% auto !important;
-        }
-        input {
-            border: none;
-            color: var(--clr-light);
-            font-size: var(--fs-regular);
-        }
-        svg {
-            stroke: var(--clr-light);
         }
     }
 }
