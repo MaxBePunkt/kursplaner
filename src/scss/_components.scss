@@ -19,3 +19,13 @@ buttons / navbars / popups / ...
         background-color: var(--clr-accent-blue-400);
     }
 }
+.loading-Div {
+    margin: 10% auto;
+    text-align: center;
+    .circle {
+        font-size: 10rem;
+        transform: scale(1);
+        transform-origin: center center;
+        animation: rotation 5s linear infinite;
+    }
+}
